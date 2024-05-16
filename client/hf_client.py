@@ -34,12 +34,12 @@ token = config.get(param1,"auth-token")
 
 # get deployment details
 headers = {'Authorization': token}
-if True:
+if len(sys.argv)>4:
     if param4 == "published":
         r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4}, verify=False)
         deployment = r.json()['deployment']
     else:
-        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers,params={"namespace": param4} verify=False)
+        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4}, verify=False)
         deployment = r.json()['deployment']
 else:
     r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, verify=False)
