@@ -53,4 +53,5 @@ SERVING_ENDPOINT = f"{url}{deployment['endpoint']}"
 
 # serving request
 headers={'Authorization': SERVING_TOKEN}
-resp = requests.post(SERVING_ENDPOINT, json={"prompt": param3}, headers=headers, verify=False)print (resp.text)
+resp = requests.post(SERVING_ENDPOINT, json={"prompt": param3}, headers=headers, verify=False)
+print (resp.text)
