@@ -60,4 +60,4 @@ with open(IMAGE_PATH, "rb") as image:
 # serving request
 headers={'Authorization': SERVING_TOKEN}
 resp = requests.post(SERVING_ENDPOINT, data=image_bytes, headers=headers, verify=False)
-print (resp.json())
+print (resp.text)
